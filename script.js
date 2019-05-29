@@ -10,11 +10,7 @@ multiply(12, 3);
 
 //Zad3
 //return average from number of arguments
-const average = (...rest) => {
-	let total = 0;
-	rest.forEach(arg => {total += arg});
-	console.log(total/rest.length);
-}
+const average = (...rest) => rest.reduce((a,b) => a+b,0)/rest.length;
 average(1, 3, 6, 6);
 
 //Zad4
